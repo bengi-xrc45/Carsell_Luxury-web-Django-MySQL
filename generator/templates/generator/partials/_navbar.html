@@ -1,0 +1,38 @@
+{% load static %}
+<!-- <header>
+  <div class="container">
+    <div class="logo">
+      <a href="{% url 'home' %}"><img src="{% static 'porfo/logo.png' %}" alt="Logo" class="logo-img"></a>
+      <h1>carsell</h1>
+    </div>
+    <nav>
+      <ul>  
+        <li><a href="{% url 'home' %}" class="active">Inicio</a></li>
+        <li><a href="{% url 'modelos:models' %}">Modelos</a></li>
+        <li><a href="{% url 'about' %}">Sobre nosotros</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>  -->
+<header>
+  <div class="logo">
+    <a href="{% url 'home' %}"><img src="{% static 'porfo/logo.png' %}" alt="Logo" class="logo-img"></a>
+  </div>
+  <div class="icono-menu">
+    <img src="{% static 'porfo/burger-icono.png' %}" id="icono-menu" alt="">
+  </div>
+  <div class="cont-menu" id="menu">
+    <ul>
+      <li><a href="{% url 'home' %}" class="active">Inicio</a></li>
+      <li><a href="{% url 'modelos:models' %}">Modelos</a></li>
+      <li><a href="{% url 'about' %}">Sobre nosotros</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'modelos:opinions' %}">Opiniones</a></li>
+      <li><a href="{% url 'logout' %}">Cerrar sesion</a></li>
+      {% else %}
+      <li><a href="{% url 'signup' %}">Registrarse</a></li>
+      <li><a href="{% url 'signin' %}">Iniciar sesion</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</header>

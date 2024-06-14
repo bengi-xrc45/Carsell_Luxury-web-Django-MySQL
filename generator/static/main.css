@@ -1,0 +1,452 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.formulario {
+    font-size: 30px;
+    width: 500px;
+    color: aqua;
+}
+
+.hola {
+    background-color: aqua;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img {
+    margin-left: 40px;
+    width: 120px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+
+
+.hero {
+    background: url('./porfo/carro3.png') no-repeat center center/cover;
+    height: 600px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+
+}
+
+.hero h3 {
+    color: #fff;
+    font-size: 50px;
+    padding: 0px 0px 10px 20px;
+}
+
+.hero-content .hero-buttons a {
+    font-size: 24px;
+    padding: 0px 65px 0px 65px;
+    margin: 15px 10px 30px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 50ms unset;
+    border: 2px solid #d5d4d4;
+}
+
+.hero-buttons a:hover {
+    border: 3px solid #fff;
+}
+
+
+.event-one {
+    height: 600px;
+    background: url('./porfo/gwagon1_4.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 20px;
+}
+
+
+.event-second {
+    height: 600px;
+    color: #fff;
+    padding: 20px;
+}
+
+.event-content {
+    padding-top: 6px;
+}
+
+.event-content h3 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+    padding: 0px 0px 0px 20px;
+}
+
+.event-content h4 {
+    font-size: 50px;
+    padding: 0px 0px 10px 20px;
+}
+
+.event-content h3 strong {
+    font-size: 68px;
+    color: #fff;
+}
+
+.event-content a {
+    font-size: 26px;
+    padding: 0px 65px 0px 65px;
+    margin: 10px 10px 30px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 50ms ease;
+    border: 2px solid #d5d4d4;
+}
+
+.event-content a:hover {
+    border: 3px solid #fff;
+}
+
+.event-three {
+    height: 600px;
+    background: url('./porfo/carro2.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 20px;
+}
+
+.center-text {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.center-text h4 {
+    color: #7e7c7c;
+    font-size: 26px;
+}
+
+.center-text h2 {
+    font-size: 40px;
+    color: #1d1d75;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.feature {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    max-width: 320px;
+
+    flex: 1 1 calc(33.333% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-image {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.feature-content {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.feature-content h3 {
+    color: #1d1d75;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.feature-content p {
+    color: #7e7c7c;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.feature-image-one {
+    background-image: url(./porfo/marcavariada1.png);
+}
+
+.feature-image-two {
+    background-image: url(./porfo/usadopresentacion2.png);
+}
+
+.feature-image-three {
+    background-image: url(./porfo/lujopresentacion3.png);
+}
+
+.feature-content a {
+    background: #fff;
+    border: solid 1px #1d1d75;
+    color: #1d1d75;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 100px 5px 100px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background: #fff;
+    color: #1d1d75;
+    padding: 40px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 400ms ease;
+    border: 1px solid #1d1d75;
+}
+
+.button:hover {
+    color: #fff;
+    background: #1d1d75;
+}
+
+.product-gallery {
+    padding: 2rem 0;
+}
+
+.product-gallery .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 0.5rem 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+}
+
+.about {
+    padding: 2rem 0;
+    background: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1 1 45%;
+}
+
+.text-content h2 {
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stat {
+    margin-right: 2rem;
+}
+
+.stat h3 {
+    font-size: 36px;
+    color: #3a3a3a;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #777;
+}
+
+.image-content {
+    flex: 1 1 45%;
+    text-align: right;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.footer {
+    background: #1d1d75;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1 1 45%;
+}
+
+.footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-left .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-left .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-right {
+    flex: 1 1 45%;
+    text-align: right;
+}
+
+.footer-right h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-right p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.icono-menu img {
+    width: 50px;
+}
+
+.icono-menu {
+    text-align: right;
+    padding-right: 50px;
+    margin: 40px 50px;
+    position: relative;
+    z-index: 10;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.cont-menu {
+    background-color: rgb(43, 42, 42);
+    box-shadow: 2px 0px 5px rgb(66, 66, 66);
+    width: 400px;
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    right: -600px; 
+    transition: right 0.5s ease; /
+}
+
+.cont-menu.active {
+    right: 0; 
+}
+
+.opacity {
+    transition: all 0.5s ease;
+}
+
+.cont-menu ul {
+    margin-top: 30px;
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+
+.cont-menu ul li a{
+    margin: 10px;
+    color: rgb(161, 158, 158);
+    display: block;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.cont-menu ul li a:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.conta {
+    background: url('./porfo/audir81_3.jpg') no-repeat center center/cover;
+}
+

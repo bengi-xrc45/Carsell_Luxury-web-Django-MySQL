@@ -1,0 +1,24 @@
+{% extends 'generator/layout3.html' %}
+
+{% block content %}
+
+<div class="formulario-opinion">
+    <h2>{{opinion.titulo}}</h2>
+    <p>{{error}}</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="input">
+            actualizar
+        </button>
+    </form>
+
+    <form action="{% url 'modelos:delete_opinion' opinion.id %}" method="POST">
+        {% csrf_token %}
+        <button class="input-delete">
+            delete
+        </button>
+    </form>
+</div>
+<br>
+{% endblock %}

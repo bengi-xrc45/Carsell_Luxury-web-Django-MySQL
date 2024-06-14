@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carsell sobre nosotros</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    {% include 'generator/partials/_navbar.html' %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    {% include 'generator/partials/_footer.html' %}
+    <script>
+        const iconoMenu = document.querySelector('#icono-menu'),
+            menu = document.querySelector('#menu');
+
+
+        
+        iconoMenu.addEventListener('click', (e) => {
+            menu.classList.toggle('active');
+            document.body.classList.toggle('opacity');
+
+            const rutaActual = e.target.getAttribute('src');
+
+            if (rutaActual == "{% static 'porfo/burger-icono.png' %}") {
+                e.target.setAttribute('src', "{% static 'porfo/burger-icono4.png' %}");
+            } else {
+                e.target.setAttribute('src', "{% static 'porfo/burger-icono.png' %}");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% extends 'generator/layout3.html' %}
+
+{% block content %}
+
+<div class="formulario-opinion">
+    <p>{{error}}</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{error}}
+        {{form.as_p}}
+        <button class="input">
+            Mandar Opinion
+        </button>
+    </form>
+</div>
+<br>
+{% endblock %}
+
+

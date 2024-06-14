@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carsell</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        {% include 'generator/partials/_hero.html' %}
+        {% block content %}
+        {% endblock %}
+    </main>
+    {% include 'generator/partials/_footer.html' %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+
+        const iconoMenu = document.querySelector('#icono-menu'),
+            menu = document.querySelector('#menu');
+
+
+        iconoMenu.addEventListener('click', (e) => {
+            menu.classList.toggle('active');
+            document.body.classList.toggle('opacity');
+
+            const rutaActual = e.target.getAttribute('src');
+
+            if (rutaActual == "{% static 'porfo/burger-icono.png' %}") {
+                e.target.setAttribute('src', "{% static 'porfo/burger-icono4.png' %}");
+            } else {
+                e.target.setAttribute('src', "{% static 'porfo/burger-icono.png' %}");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends 'generator/layout3.html' %}
+
+{% block content %}
+<div class="formulario">
+    <h1>Registrarse</h1>
+    <p>{{error}}</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="username">
+            <input type="text" name="username" id="username" required>
+            <label for="username">Nombre de usuario</label> 
+        </div>
+        <div class="username">
+            <input type="password" name="password1" id="password1" required>
+            <label for="password1">Contraseña</label>
+        </div>
+        <div class="username">
+            <input type="password" name="password2" id="password2" required>
+            <label for="password2">Confirmar Contraseña</label>
+        </div>
+        <button class="input">
+            Registrarse
+        </button>
+        <div class="registrarse">
+            ya tienes una cuenta <a href="{% url 'signin' %}">Iniciar sesion</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+<!-- <form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>
+        Registrarse
+    </button>
+</form> -->

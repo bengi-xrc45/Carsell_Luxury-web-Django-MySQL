@@ -1,0 +1,30 @@
+{% extends 'generator/layout3.html' %}
+
+{% block content %}
+
+<div class="opiniones">
+    <h1>Mis opiniones</h1>
+    <ul>
+        {% for opinion in opinions %}
+        <li>
+            <a href="{% url 'modelos:opinion_detail' opinion.id  %}">
+                <h3>{{opinion.titulo}}</h3>
+                <p>{{opinion.fecha_creacion}}</p>
+                <p>{{opinion.user.username}}</p>
+            </a>
+        </li>
+        <br>
+        {% endfor %}
+        <li>
+            <a href="{% url 'modelos:create_opinion' %}" class="crear-opi">
+                <button class="input-crear">
+                    crear opinion
+                </button>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+
+{% endblock %}

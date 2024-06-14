@@ -1,0 +1,55 @@
+{% extends 'generator/layout2.html' %}
+
+{% block content %}
+{% load static %}
+<section class="hero fade-in">
+    <div class="hero-content">
+        <h2>Sobre Nosotros</h2>
+        <p>En Carsell Luxury nos apasiona ayudarte a encontrar el auto de tus sueños.</p>
+    </div>
+</section>
+<section class="info-section fade-in">
+    <div class="container">
+        <div class="info-content">
+            <div class="info-image">
+                <img src="{% static 'porfo/bentley.png' %}" alt="Imagen 1">
+            </div>
+            <div class="info-text">
+                <h3>Bienvenido a Carsell Luxury</h3>
+                <p>Con más de 10 años de experiencia en la industria automotriz, nos hemos establecido como líderes en la 
+                    venta de vehículos nuevos y usados de alta calidad. Nuestro compromiso es ofrecerte no solo una amplia variedad de opciones, 
+                    sino también un servicio excepcional y personalizado. Explora nuestra amplia selección de carros de todas las marcas.</p>
+                <p>El equipo de [Nombre de la Empresa] está compuesto por profesionales apasionados y expertos en la industria automotriz. Desde nuestros asesores de ventas hasta nuestros técnicos de servicio, cada miembro de nuestro equipo está comprometido a proporcionarte una experiencia de compra y servicio excepcional. 
+                    Nos enorgullecemos de nuestra capacitación continua y nuestro conocimiento profundo del mercado automotriz, lo que nos permite ofrecerte el mejor asesoramiento y soporte posible.</p>
+            </div>
+        </div>
+        <div class="info-content reverse">
+            <div class="info-image">
+                <img src="{% static 'porfo/liquimoly.png' %}" alt="Imagen 2">
+            </div>
+            <div class="info-text">
+                <h3>Nuestros Servicios</h3>
+                <p>En Carsell nos especializamos en la reventa de una variedad de carros, desde modelos básicos hasta
+                    vehículos de lujo. Ofrecemos una experiencia de compra fácil y segura para nuestros clientes. Creemos en la transparencia, la confianza y la satisfacción del cliente. Nuestro equipo de expertos está siempre disponible para asesorarte 
+                    y garantizar que encuentres el vehículo perfecto que se adapte a tus necesidades.</p>
+                <p>En Carsell, creemos en devolver a la comunidad que nos ha apoyado a lo largo de los años. Participamos activamente en diversas iniciativas y programas locales, desde patrocinio de eventos comunitarios hasta colaboración con organizaciones benéficas. 
+                    Nuestro objetivo es ser un pilar en nuestra comunidad, contribuyendo positivamente al bienestar y desarrollo de la misma.</p>
+            </div>
+        </div>
+        <div class="info-content">
+            <div class="info-image">
+                <img src="{% static 'porfo/sobre_nosotros.png' %}" alt="Imagen 3">
+            </div>
+            <div class="info-text">
+                <h3>Sobre Nosotros</h3>
+                <p>Carsell es una empresa dedicada a la venta de automóviles usados de alta calidad. Nos enorgullecemos
+                    de ofrecer un servicio excepcional y una amplia gama de opciones para todos los gustos y
+                    presupuestos.</p>
+                <p>Nuestra misión es simple: proporcionar vehículos de calidad a precios competitivos, acompañados de un servicio excepcional. Creemos firmemente en la importancia de la honestidad, la transparencia y la satisfacción del cliente. 
+                    Estos valores fundamentales nos guían en todo lo que hacemos y nos han permitido construir relaciones duraderas con nuestros clientes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'generator/layout2.html' %}
+{% block content %}
+{% load static %}
+<section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+        <img src="{{carro.image.url}}" width="100%" height="450px" id="MainImg" alt="">
+    </div>
+    <div class="single-pro-details">
+        <h6>Modelo / </h6>
+        <h2>{{carro.marca}} {{carro.modelo}}</h2>
+        <span>Precio desde</span>
+        <h3> ${{carro.precio}}</h3>
+        <a
+            href="https://api.whatsapp.com/send?phone=573246519481&text=Hola%20buenas%2C%20me%20interesa%20el%20{{carro.marca}}%20{{carro.modelo}}">
+            <button class="whatsapp">
+                <i class="fab fa-whatsapp"> WhatsApp</i>
+            </button>
+        </a>
+        <a href="#">
+            <button class="preguntar">
+                <i class="fas fa-question-circle"></i> Preguntar
+            </button>
+        </a>
+    </div>
+</section>
+<section>
+    <div class="panel-one">
+        <div>
+            <p>Motor</p>
+            <h4>{{carro.motor}}</h4>
+        </div>
+        <div>
+            <p>Cilindros</p>
+            <h4>{{carro.cilindros}}</h4>
+        </div>
+        <div>
+            <p>Valvulas</p>
+            <h4>{{carro.valvulas}}</h4>
+        </div>
+        <div>
+            <p>Potencia</p>
+            <h4>{{carro.potencia}}</h4>
+        </div>
+    </div>
+    <div class="panel-two">
+        <div>
+            <p>Año</p>
+            <h4>{{carro.año}}</h4>
+        </div>
+        <div>
+            <p>Transmision</p>
+            <h4>{{carro.transmision}}</h4>
+        </div>
+        <div>
+            <p>Combustible</p>
+            <h4>{{carro.combustible}}</h4>
+        </div>
+        <div>
+            <p>Numero de asientos </p>
+            <h4>{{carro.num_asientos}}</h4>
+        </div>
+    </div>
+    <div class="panel-two">
+        <p class="descripcion">{{carro.descripcion}}</p>
+    </div>
+</section>
+<section>
+    <h4 class="subtitle">Tambien te puede interesar </h4>
+    <div class="contenedor">
+        {% for car in cars|slice:':4' %}
+        <div class="card">
+            <div class="card-header">
+                <img src="{{car.image.url}}" alt="VMW">
+            </div>
+            <div class="card-body">
+                <h4 class="card-price">
+                    Precio desde ${{car.precio}}
+                </h4>
+                <h2 class="card-title">{{car.marca}} {{car.modelo}}</h2>
+                <a href="{% url 'modelos:modelos_info' car.id %}" class="btn">Ver más</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

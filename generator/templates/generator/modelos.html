@@ -1,0 +1,35 @@
+{% extends 'generator/layout2.html' %}
+
+
+{% block content %}
+{% load static %}
+<section class="hero fade-in">
+    <div class="hero-content">
+        <h2>Nuestros Modelos</h2>
+        <p>Explora nuestra gama completa de modelos de coches, desde los más económicos hasta los más lujosos.</p>
+    </div>
+</section>
+<br>
+<div class="contenedor">
+    {% for car in cars %}
+    <div class="card" onclick="redirectToCar('{{ car.id }}')">
+        <div class="card-header">
+            <img src="{{car.image.url}}" alt="VMW">
+        </div>
+        <div class="card-body">
+            <h4 class="card-price">
+                Precio desde ${{car.precio}}
+            </h4>
+            <h2 class="card-title">{{car.marca}} {{car.modelo}}</h2>
+            <a href="{% url 'modelos:modelos_info' car.id %}" class="btn">Ver más</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<script>
+    function redirectToCar(carId) {
+        const url = "{% url 'modelos:modelos_info' 0 %}".replace('0', carId);
+        window.location.href = url;
+    }
+</script>
+{% endblock %}

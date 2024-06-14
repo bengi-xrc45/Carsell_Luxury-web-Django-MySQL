@@ -1,0 +1,120 @@
+{% extends 'generator/layout.html' %}
+{% block content %}
+{% load static %}
+
+<div class="conta">
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'porfo/logo.png' %}" alt="Logo" class="logo-img"></a>
+        </div>
+        <div class="icono-menu">
+            <img src="{% static 'porfo/burger-icono.png' %}" id="icono-menu" alt="">
+        </div>
+        <div class="cont-menu" id="menu">
+            <ul>
+                <li><a href="{% url 'home' %}" class="active">Inicio</a></li>
+                <li><a href="{% url 'modelos:models' %}">Modelos</a></li>
+                <li><a href="{% url 'about' %}">Sobre nosotros</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'modelos:opinions' %}">Opiniones</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar sesion</a></li>
+                {% else %}
+                <li><a href="{% url 'signup' %}">Registrarse</a></li>
+                <li><a href="{% url 'signin' %}">Iniciar sesion</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+    <section class="event-second">
+        <div class="event-content">
+            <h3>Nuevo <Strong>Audi R8</Strong></h3>
+            <h3><strong>V10 Coupe</strong></h3>
+            <a href="{% url 'modelos:modelos_info' carro_id=7 %}" class="">
+                <p>Mas informacion </p>
+            </a>
+        </div>
+    </section>
+</div>
+<section class="event-one">
+    <div class="event-content">
+        <h3>Nuevo <Strong>Mercedes</Strong></h3>
+        <h3><strong>Gwagon</strong></h3>
+        <a href="{% url 'modelos:modelos_info' carro_id=15 %}" class="">
+            <p>Mas informacion</p>
+        </a>
+    </div>
+</section>
+<section class="hero ">
+    <div class="hero-content">
+        <h3>Explora toda nuestra amplia seleccion de vehiculos</h3>
+        <div class="hero-buttons">
+            <a href="{% url 'modelos:models' %}" class="">
+                <p>Explorar ahora</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="center-text fade-in">
+    <div>
+        <h4><strong>Herramientas de busqueda</strong></h4>
+        <h2>Encuentra tu nuevo carro</h2>
+    </div>
+</section>
+<section class="features fade-in">
+    <div class="feature">
+        <div class="feature-image feature-image-one"></div>
+        <div class="feature-content">
+            <h3>Marcas Variadas</h3>
+            <p>Descubre nuestra amplia selección de carros nuevos de diferentes marcas y estilos.</p>
+            <a href="#" class="button">Ver</a>
+        </div>
+    </div>
+    <div class="feature">
+        <div class="feature-image feature-image-two"></div>
+        <div class="feature-content">
+            <h3>Carros Usados</h3>
+            <p>Encuentra excelentes ofertas en nuestra colección de carros usados de alta calidad.</p>
+            <a href="#" class="button">Ver</a>
+        </div>
+    </div>
+    <div class="feature">
+        <div class="feature-image feature-image-three"></div>
+        <div class="feature-content">
+            <h3>Carros de Lujo</h3>
+            <p>Explora nuestra exclusiva gama de carros de lujo para satisfacer tus gustos más exigentes.</p>
+            <a href="#" class="button">Ver</a>
+        </div>
+    </div>
+</section>
+<section class="event-three">
+    <div class="event-content">
+        <h3>Conoce mas sobre</h3>
+        <h3><Strong>Carsell Luxury Prime</Strong></h3>
+        <a href="{% url 'about' %}" class="">
+            <p>Descubrelo</p>
+        </a>
+    </div>
+</section>
+<section class="about fade-in">
+    <div class="container about-content">
+        <div class="text-content">
+            <h2>Descubre las opiniones de nuestros clientes y seguidores</h2>
+            <p>En Carsell nos dedicamos a la reventa de carros de todas las marcas, desde los modelos más básicos
+                hasta los más lujosos. Conoce nuestra amplia selección de vehículos.</p>
+            <div class="stats">
+                <div class="stat">
+                    <h3>300mil+</h3>
+                    <p>¡Con nosotros siguiendonos!</p>
+                </div>
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>¡Clientes satisfechos! </p>
+                </div>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="{% static 'porfo/interior.jpg'%}" alt="About Carsell">
+        </div>
+    </div>
+</section>
+{% endblock %}
